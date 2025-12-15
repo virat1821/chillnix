@@ -16,258 +16,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
   <link rel="stylesheet" href="./style.css" />
-
-
-
-  
-
-  <style>
-    :root{
-      --ice-1: #55c4fb;
-      --ice-2: #d9f0ff;
-      --ice-3: #bfeeff;
-      --blue-1: #0a5f8f;
-      --blue-2: #0f9be0;
-      --blue-3: #005b8c;
-      --accent: #66c6ff;
-      --glass: rgba(255,255,255,0.12);
-      --muted: rgba(3,48,75,0.65);
-      --card-shadow: 0 12px 30px rgba(10,88,120,0.08);
-      --bg-gradient: linear-gradient(90deg, #0061FF, #60EFFF);
-    }
-
-    /* ---------- Base ---------- */
-    body {
-      font-family: Inter, sans-serif;
-      background: linear-gradient(180deg, var(--ice-1), #f4fbff);
-      margin: 0;
-      color: #043042;
-      scroll-behavior: smooth;
-    }
-
-    h1, h2, h4, h5, h6 {
-      font-family: Montserrat, sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      color: var(--blue-1);
-      margin-bottom: .6rem;
-    }
-    h3{
-        color: var(--blue-3);
-    }
-
-    /* Gradient Hero Title */
-    .title {
-      font-weight: 800 !important;
-      background: linear-gradient(90deg, var(--blue-1), var(--blue-2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 1px;
-    }
-
-    /* Section Title Accent */
-    section h3, section h2 {
-      position: relative;
-      font-weight: 800;
-      font-size: 2rem;
-      padding-left: 20px;
-    }
-    section h3::before, section h2::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 6px;
-      height: 28px;
-      background: linear-gradient(180deg, var(--blue-2), var(--accent));
-      border-radius: 4px;
-      opacity: .9;
-    }
-
-    /* Animations */
-    /* .fade-up {
-      opacity: 0;
-      transform: translateY(25px);
-      animation: fadeUp 0.9s ease-out forwards;
-    }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .slide-right {
-      opacity: 0;
-      transform: translateX(-35px);
-      animation: slideRight 0.8s ease-out forwards;
-    }
-    @keyframes slideRight {
-      to { opacity: 1; transform: translateX(0); }
-    }
-    .slide-left {
-      opacity: 0;
-      transform: translateX(35px);
-      animation: slideLeft 0.8s ease-out forwards;
-    }
-    @keyframes slideLeft {
-      to { opacity: 1; transform: translateX(0); }
-    } */
-
-    /* Snow Canvas */
-    #snow-canvas {
-      position: fixed;
-      top:0; left:0;
-      width:100%;
-      height:100%;
-      pointer-events:none;
-      z-index: 9999;
-      opacity: 0.9;
-    }
-
-    /* Navbar */
-    .navbar {
-      backdrop-filter: blur(8px);
-      background: rgba(255,255,255,0.75);
-      border-bottom: 1px solid #d9f0ff;
-    }
-    .navbar-brand { font-weight: 800; color: var(--blue-1); }
-    .nav-link { font-weight: 600; color: var(--blue-1) !important; }
-    .nav-link.active {
-      color: var(--blue-2) !important;
-      text-decoration: underline;
-      text-underline-offset: 8px;
-    }
-
-    /* Hero */
-    .hero {
-      padding: 70px 0;
-      position: relative;
-      z-index: 2;
-    }
-    .glass {
-      background: rgba(255,255,255,0.85);
-      border-radius: 14px;
-      padding: 28px;
-      border: 1px solid rgba(255,255,255,0.6);
-      box-shadow: var(--card-shadow);
-    }
-    .chip {
-      display:inline-block;
-      padding:6px 12px;
-      font-family: Montserrat;
-      font-size: .9rem;
-      background: rgba(30,170,241,0.12);
-      border-radius: 999px;
-      font-weight:600;
-      color: var(--blue-1);
-    }
-
-    .carousel-item img {
-      height: 430px;
-      object-fit: cover;
-      border-radius: 14px;
-    }
-
-    /* From Uiverse.io by nikk7007 */ 
-.slice {
-  --c1: #202020;
-  --c2: #00a1b7;
-  --size-letter: 12px;
-  padding: 0.5em 1em;
-  font-size: var(--size-letter);
-
-  background-color: transparent;
-  border: calc(var(--size-letter) / 6) solid var(--c2);
-  border-radius: 0.2em;
-  cursor: pointer;
-
-  overflow: hidden;
-  position: relative;
-  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
-
-  & > .text {
-    font-weight: 700;
-    color: var(--c2);
-    position: relative;
-    z-index: 1;
-    transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
-  }
-}
-
-.slice::after {
-  content: "";
-
-  width: 0;
-  /* height: calc(300% + 1em); */
-
-  position: absolute;
-  translate: -50% -50%;
-  inset: 50%;
-  rotate: 30deg;
-
-  background-color: var(--c2);
-  transition: 1000ms cubic-bezier(0.83, 0, 0.17, 1);
-}
-
-.slice:hover {
-  & > .text {
-    color: var(--c1);
-  }
-  &::after {
-    width: calc(120% + 1em);
-  }
-}
-
-.slice:active {
-  scale: 0.98;
-  filter: brightness(0.9);
-}
-
-    /* Section Leads */
-    .section-lead {
-      font-size: 1.1rem;
-      color: var(--muted);
-    }
-
-    /* Muted Text */
-    .muted {
-      color: var(--muted);
-      line-height: 1.6;
-    }
-    .small-muted {
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    /* Product / Contact Cards */
-    .product-card, .contact-card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: var(--card-shadow);
-    }
-    .icon-circle {
-      font-size: 2.5rem;
-      color: var(--blue-2);
-      background: rgba(15,155,224,0.12);
-      border-radius: 50%;
-      padding: 12px;
-    }
-
-   
-   /* services */
-    .bg-mygradient {
-     background: #c2e59c;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    }
-
-
-
-    .footer {
-      font-size: .9rem;
-      color: var(--muted);
-    }
-    
-    
-  </style>
 </head>
 
 <body>
@@ -358,55 +106,66 @@ background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, F
   </div>
 </header>
 
-
-<!-- ABOUT -->
 <section id="about" class="py-5">
   <div class="container">
-    <h3 data-aos="flip-left" class="fade-up">About CHILLNIX</h3>
+
+    <h3  data-aos="fade-left"  data-aos-duration="2000" >About CHILLNIX</h3>
 
     <div class="row g-4 align-items-center mt-2">
-      <div class="col-md-6 fade-up">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7 fade-up">
         <p class="muted">
-          <strong>CHILLNIX Cooling Solutions</strong> is a trading name of Iseland Cooling Services Ltd.
-          With more than <strong>50 years of combined experience</strong>, we specialise in the supply,
-          installation and maintenance of high-performance refrigeration cabinets, cold rooms
-          and climate-controlled storage systems across Scotland and the UK.
+          <strong>CHILLNIX Cooling Solutions</strong> is a trading name of
+          <strong>Iseland Cooling Services Ltd</strong>. With more than
+          <strong>50 years of combined experience</strong>, we specialise in the
+          supply, installation and maintenance of high-performance refrigeration
+          cabinets, cold rooms and climate-controlled storage systems across
+          Scotland and the UK.
         </p>
 
-        <p class="muted">
+        <p class="muted mt-3 mb-2">
           We proudly support a wide range of businesses including:
         </p>
 
-        <ul class="muted">
-          <li>Takeaways</li>
-          <li>Independent retailers</li>
-          <li>Convenience stores & supermarkets</li>
-          <li>Hospitality & food service providers</li>
-          <li>Pharmaceutical & industrial clients</li>
+        <ul class="about-list">
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Takeaways</li>
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Independent retailers</li>
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Convenience stores & supermarkets</li>
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Hospitality & food service providers</li>
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Pharmaceutical & industrial clients</li>
         </ul>
 
-        <p class="muted">
-          Whether you need a single refrigeration unit or a complete cold-room fit-out,
-          our team delivers efficient, durable and energy-smart solutions.
+        <p class="muted mt-3">
+          Whether you need a single refrigeration unit or a complete cold-room
+          fit-out, our team delivers efficient, durable and energy-smart solutions.
         </p>
-
-        <a href="#contact" class="btn btn-outline-primary mt-2">Get in Touch</a>
       </div>
 
-      <div class="col-md-6 slide-left">
-        <div data-aos="zoom-in" class="product-card p-4">
-          <div class="row g-3 text-center">
-            <div data-aos="flip-left" data-aos-delay="400" class="col-6 border-end">
-              <i class="bi bi-people icon-circle mb-2"></i>
-              <h6 class="mb-1">Experienced Team</h6>
-              <small class="muted">50+ years combined</small>
-            </div>
-            <div data-aos="flip-right" data-aos-delay="450" class="col-6">
-              <i class="bi bi-tools icon-circle mb-2"></i>
-              <h6 class="mb-1">End-to-End Service</h6>
-              <small class="muted">Design • Install • Maintain</small>
+      <!-- RIGHT STATS -->
+      <div class="col-lg-5 slide-left">
+        <div class="row g-3">
+
+          <div class="col-12" data-aos="flip-up"  data-aos-duration="2000">
+            <div class="about-card">
+              <i class="bi bi-people-fill"></i>
+              <div>
+                <h6>Experienced Team</h6>
+                <small class="muted">50+ years combined experience</small>
+              </div>
             </div>
           </div>
+
+          <div class="col-12" data-aos="flip-down"  data-aos-duration="2000">
+            <div class="about-card">
+              <i class="bi bi-tools"></i>
+              <div>
+                <h6>End-to-End Service</h6>
+                <small class="muted">Design • Install • Maintain</small>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -414,67 +173,107 @@ background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, F
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-5 bg-white">
+
+
+<section id="services" class="py-5">
   <div class="container">
 
-    <h3 data-aos="zoom-in" class="fade-up">What We Offer</h3>
-    <p class="section-lead fade-up">
+    <h3 data-aos="fade-left"  data-aos-duration="2000">What We Offer</h3>
+    <p class="section-lead fade-up mb-4">
       Tailored refrigeration solutions for every need — from concept to installation.
     </p>
 
-    <div class="row g-4 mt-1">
+    <!-- Service Cards -->
+    <div class="row g-4">
 
-      <div class="col-md-8 fade-up">
-        <ul class="list-unstyled muted">
-          <li>✅ Cold Room Design & Installation</li>
-          <li>✅ Commercial Refrigeration Units</li>
-          <li>✅ Retail & Foodservice Fridges</li>
-          <li>✅ Multideck & Display Cabinets</li>
-          <li>✅ Freezer Rooms</li>
-          <li>✅ System Upgrades & Refits</li>
-          <li>✅ Emergency Call-Out & Maintenance</li>
-        </ul>
-
-        <p class="muted">
-          We customise every system to your space, energy needs and compliance requirements —
-          ensuring long-term performance and reliability.
-        </p>
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <i class="bi bi-snow icon"></i>
+          <h5>Cold Room Design & Installation</h5>
+          <p>Custom-built cold rooms engineered for efficiency, safety and compliance.</p>
+        </div>
       </div>
 
-      <div class="col-md-4 slide-left">
-        <div data-aos="zoom-in" class="product-card p-4">
-          <div class="row g-3 text-center">
-            <div data-aos="flip-left" data-aos-delay="400" class="col-6 border-end">
-              <i class="bi bi-box-seam icon-circle mb-2"></i>
-              <h6 class="mb-1">Commercial Installs</h6>
-              <small class="muted">High-quality systems</small>
-            </div>
-            <div data-aos="flip-right" data-aos-delay="450" class="col-6">
-              <i class="bi bi-wrench icon-circle mb-2"></i>
-              <h6 class="mb-1">Maintenance Support</h6>
-              <small class="muted">Full aftercare service</small>
-            </div>
-          </div>
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <i class="bi bi-box-seam icon"></i>
+          <h5>Commercial Refrigeration Units</h5>
+          <p>Reliable refrigeration systems for retail, hospitality and industrial use.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <i class="bi bi-shop icon"></i>
+          <h5>Retail & Foodservice Fridges</h5>
+          <p>High-performance fridges designed for visibility, hygiene and durability.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <i class="bi bi-display icon"></i>
+          <h5>Multideck & Display Cabinets</h5>
+          <p>Energy-efficient display solutions with advanced cooling technology.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <i class="bi bi-thermometer-snow icon"></i>
+          <h5>Freezer Rooms</h5>
+          <p>Precision temperature-controlled freezer rooms for critical storage needs.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <i class="bi bi-arrow-repeat icon"></i>
+          <h5>System Upgrades & Refits</h5>
+          <p>Modernise existing systems to improve performance and energy efficiency.</p>
         </div>
       </div>
 
     </div>
 
-    <p class="small-muted mt-3 fade-up">
-      Need emergency support? <a href="#contact">Request a quote or consultation</a>.
-    </p>
+    <!-- Bottom Highlight Cards -->
+    <div class="row g-4 mt-5">
+
+      <div class="col-md-6">
+        <div class="highlight-card">
+          <i class="bi bi-building-check"></i>
+          <h6>Commercial Installs</h6>
+          <p>High-quality systems delivered by experienced engineers.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="highlight-card">
+          <i class="bi bi-tools"></i>
+          <h6>Maintenance Support</h6>
+          <p>Full aftercare service with emergency call-out support.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-5">
+      <p class="muted mb-3">
+        Need emergency support? Request a quote or consultation.
+      </p>
+      <a href="#contact" class="btn btn-primary btn-lg">
+        Request a Quote
+      </a>
+    </div>
 
   </div>
-
 </section>
-
-
 
 
 
 <!-- PRODUCTS -->
-<section id="products" class="py-5">
+<!-- <section id="products" class="py-5">
   <div class="container">
 
     <h3 class="fade-up">Products</h3>
@@ -484,7 +283,7 @@ background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, F
 
     <div class="row g-4 mt-3">
 
-      <!-- Product 1 -->
+    
       <div class="col-md-4 fade-up">
         <div class="product-card p-3 h-100">
           <img 
@@ -504,7 +303,7 @@ background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
 
-      <!-- Product 2 -->
+     
       <div class="col-md-4 fade-up" style="animation-delay: .1s">
         <div class="product-card p-3 h-100">
           <img 
@@ -524,7 +323,7 @@ background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
 
-      <!-- Product 3 -->
+      
       <div class="col-md-4 fade-up" style="animation-delay: .2s">
         <div class="product-card p-3 h-100">
           <img 
@@ -546,14 +345,14 @@ background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, F
 
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- PROJECTS -->
 <section id="projects" class="py-5 bg-white">
   <div class="container">
 
-    <h3 class="fade-up">Projects</h3>
+    <h3 data-aos="fade-left"  data-aos-duration="2000">Projects</h3>
     <p class="section-lead fade-up">A selection of completed installations across the UK.</p>
 
     <div class="row g-4 mt-3">
@@ -724,12 +523,12 @@ background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, F
 </section>
 
 <!-- FOOTER -->
-<footer class="mt-4 py-4" style="background:#e8f7ff;">
+<footer class="mt-4 py-4">
   <div class="container">
     <div class="row gy-3 align-items-center">
 
       <div class="col-md-4">
-        <img src="https://via.placeholder.com/180x50?text=CHILLNIX" style="max-width:180px;">
+        <img src="./images/logo.png" style="max-width:180px;">
       </div>
 
       <div class="col-md-4 text-center small-muted">

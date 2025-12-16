@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CHILLNIX Cooling Solutions — Commercial Refrigeration UK</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,265 +18,273 @@
   <!-- AOS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./webapps/style.css" />
+  <link rel="stylesheet" href="./webapps/main.css">
 </head>
 
 <body>
 
-<!-- Snow Canvas -->
-<canvas id="snow-canvas"></canvas>
+  <!-- Snow Canvas -->
+  <canvas id="snow-canvas"></canvas>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#"><img style="width: 100px; height: 65px;" src="./images/logo.png" alt="logo" srcset=""> </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
-      <span><i class="bi bi-list"></i></span>
-    </button>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img style="width: 100px; height: 65px;" src="./images/logo.png" alt="logo"
+          srcset=""> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
+        <span><i class="bi bi-list"></i></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navBar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<!-- HERO -->
-<header id="home" class="hero">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-
-      <div class="col-lg-6 fade-up">
-        <div class="glass">
-          <span class="chip">Reliable cooling solutions</span>
-
-          <h1  data-aos="zoom-in" class="display-5 title">Experience excellence in refrigeration</h1>
-
-          <p class="lead muted">
-            Welcome to <strong>CHILLNIX Cooling Solutions</strong> — your trusted partner in commercial refrigeration and cold room systems across Scotland and the UK.
-          </p>
-
-          <div class="d-flex gap-2 mt-3">
-            <a href="#services" class="btn btn-primary btn-lg">
-              <i class="bi bi-gear-fill me-2"></i> View Services
-            </a>
-            <a href="#contact" class="btn btn-outline-primary btn-lg">
-              <i class="bi bi-envelope me-2"></i> Get a Quote
-            </a>
-          
-
-          </div>
-
-          <hr class="my-4">
-
-          <p class="small muted">
-            Official partner of <strong>NabcoUK</strong> — offering premium, energy-efficient refrigeration systems.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-6 slide-left">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3200">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./images/hero-bg-one.jpeg" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/hero-bg-two.png" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="./images/hero-bg-three.png" class="d-block w-100">
-            </div>
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</header>
-
-<section id="about" class="py-5">
-  <div class="container">
-
-    <h3  data-aos="fade-left"  data-aos-duration="2000" >About CHILLNIX</h3>
-
-    <div class="row g-4 align-items-center mt-2">
-
-      <!-- LEFT CONTENT -->
-      <div class="col-lg-7 fade-up">
-        <p class="muted">
-          <strong>CHILLNIX Cooling Solutions</strong> is a trading name of
-          <strong>Iseland Cooling Services Ltd</strong>. With more than
-          <strong>50 years of combined experience</strong>, we specialise in the
-          supply, installation and maintenance of high-performance refrigeration
-          cabinets, cold rooms and climate-controlled storage systems across
-          Scotland and the UK.
-        </p>
-
-        <p class="muted mt-3 mb-2">
-          We proudly support a wide range of businesses including:
-        </p>
-
-        <ul class="about-list">
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Takeaways</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Independent retailers</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Convenience stores & supermarkets</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Hospitality & food service providers</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"><i class="bi bi-check-circle-fill"></i> Pharmaceutical & industrial clients</li>
+      <div class="collapse navbar-collapse" id="navBar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="#contact">Contact</a></li>
         </ul>
-
-        <p class="muted mt-3">
-          Whether you need a single refrigeration unit or a complete cold-room
-          fit-out, our team delivers efficient, durable and energy-smart solutions.
-        </p>
       </div>
+    </div>
+  </nav>
 
-      <!-- RIGHT STATS -->
-      <div class="col-lg-5 slide-left">
-        <div class="row g-3">
 
-          <div class="col-12" data-aos="flip-up"  data-aos-duration="2000">
-            <div class="about-card">
-              <i class="bi bi-people-fill"></i>
-              <div>
-                <h6>Experienced Team</h6>
-                <small class="muted">50+ years combined experience</small>
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+
+        <div class="col-lg-6 fade-up">
+          <div class="glass">
+            <span class="chip">Reliable cooling solutions</span>
+
+            <h1 data-aos="zoom-in" class="display-5 title">Experience excellence in refrigeration</h1>
+
+            <p class="lead muted">
+              Welcome to <strong>CHILLNIX Cooling Solutions</strong> — your trusted partner in commercial refrigeration
+              and cold room systems across Scotland and the UK.
+            </p>
+
+            <div class="d-flex gap-2 mt-3">
+              <a href="#services" class="btn btn-primary btn-lg">
+                <i class="bi bi-gear-fill me-2"></i> View Services
+              </a>
+              <a href="#contact" class="btn btn-outline-primary btn-lg">
+                <i class="bi bi-envelope me-2"></i> Get a Quote
+              </a>
+
+
+            </div>
+
+            <hr class="my-4">
+
+            <p class="small muted">
+              Official partner of <strong>NabcoUK</strong> — offering premium, energy-efficient refrigeration systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 slide-left">
+          <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3200">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/hero-bg-one.jpeg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/hero-bg-two.png" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/hero-bg-three.png" class="d-block w-100">
               </div>
             </div>
-          </div>
 
-          <div class="col-12" data-aos="flip-down"  data-aos-duration="2000">
-            <div class="about-card">
-              <i class="bi bi-tools"></i>
-              <div>
-                <h6>End-to-End Service</h6>
-                <small class="muted">Design • Install • Maintain</small>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="py-5">
+    <div class="container">
+
+      <h3 data-aos="fade-left" data-aos-duration="2000">About CHILLNIX</h3>
+
+      <div class="row g-4 align-items-center mt-2">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-7 fade-up">
+          <p class="muted">
+            <strong>CHILLNIX Cooling Solutions</strong> is a trading name of
+            <strong>Iseland Cooling Services Ltd</strong>. With more than
+            <strong>50 years of combined experience</strong>, we specialise in the
+            supply, installation and maintenance of high-performance refrigeration
+            cabinets, cold rooms and climate-controlled storage systems across
+            Scotland and the UK.
+          </p>
+
+          <p class="muted mt-3 mb-2">
+            We proudly support a wide range of businesses including:
+          </p>
+
+          <ul class="about-list">
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-offset="0"><i
+                class="bi bi-check-circle-fill"></i> Takeaways</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0"><i
+                class="bi bi-check-circle-fill"></i> Independent retailers</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"><i
+                class="bi bi-check-circle-fill"></i> Convenience stores & supermarkets</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="0"><i
+                class="bi bi-check-circle-fill"></i> Hospitality & food service providers</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"><i
+                class="bi bi-check-circle-fill"></i> Pharmaceutical & industrial clients</li>
+          </ul>
+
+          <p class="muted mt-3">
+            Whether you need a single refrigeration unit or a complete cold-room
+            fit-out, our team delivers efficient, durable and energy-smart solutions.
+          </p>
+        </div>
+
+        <!-- RIGHT STATS -->
+        <div class="col-lg-5 slide-left">
+          <div class="row g-3">
+
+            <div class="col-12" data-aos="flip-up" data-aos-duration="2000">
+              <div class="about-card">
+                <i class="bi bi-people-fill"></i>
+                <div>
+                  <h6>Experienced Team</h6>
+                  <small class="muted">50+ years combined experience</small>
+                </div>
               </div>
             </div>
+
+            <div class="col-12" data-aos="flip-down" data-aos-duration="2000">
+              <div class="about-card">
+                <i class="bi bi-tools"></i>
+                <div>
+                  <h6>End-to-End Service</h6>
+                  <small class="muted">Design • Install • Maintain</small>
+                </div>
+              </div>
+            </div>
+
           </div>
-
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-<section id="services" class="py-5">
-  <div class="container">
+  <section id="services" class="py-5">
+    <div class="container">
 
-    <h3 data-aos="fade-left"  data-aos-duration="2000">What We Offer</h3>
-    <p class="section-lead fade-up mb-4">
-      Tailored refrigeration solutions for every need — from concept to installation.
-    </p>
-
-    <!-- Service Cards -->
-    <div class="row g-4">
-
-      <div class="col-md-4">
-        <div class="service-card h-100">
-          <i class="bi bi-snow icon"></i>
-          <h5>Cold Room Design & Installation</h5>
-          <p>Custom-built cold rooms engineered for efficiency, safety and compliance.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-card h-100">
-          <i class="bi bi-box-seam icon"></i>
-          <h5>Commercial Refrigeration Units</h5>
-          <p>Reliable refrigeration systems for retail, hospitality and industrial use.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-card h-100">
-          <i class="bi bi-shop icon"></i>
-          <h5>Retail & Foodservice Fridges</h5>
-          <p>High-performance fridges designed for visibility, hygiene and durability.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-card h-100">
-          <i class="bi bi-display icon"></i>
-          <h5>Multideck & Display Cabinets</h5>
-          <p>Energy-efficient display solutions with advanced cooling technology.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-card h-100">
-          <i class="bi bi-thermometer-snow icon"></i>
-          <h5>Freezer Rooms</h5>
-          <p>Precision temperature-controlled freezer rooms for critical storage needs.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="service-card h-100">
-          <i class="bi bi-arrow-repeat icon"></i>
-          <h5>System Upgrades & Refits</h5>
-          <p>Modernise existing systems to improve performance and energy efficiency.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom Highlight Cards -->
-    <div class="row g-4 mt-5">
-
-      <div class="col-md-6">
-        <div class="highlight-card">
-          <i class="bi bi-building-check"></i>
-          <h6>Commercial Installs</h6>
-          <p>High-quality systems delivered by experienced engineers.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="highlight-card">
-          <i class="bi bi-tools"></i>
-          <h6>Maintenance Support</h6>
-          <p>Full aftercare service with emergency call-out support.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CTA -->
-    <div class="text-center mt-5">
-      <p class="muted mb-3">
-        Need emergency support? Request a quote or consultation.
+      <h3 data-aos="fade-left" data-aos-duration="2000">What We Offer</h3>
+      <p class="section-lead fade-up mb-4">
+        Tailored refrigeration solutions for every need — from concept to installation.
       </p>
-      <a href="#contact" class="btn btn-primary btn-lg">
-        Request a Quote
-      </a>
+
+      <!-- Service Cards -->
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <i class="bi bi-snow icon"></i>
+            <h5>Cold Room Design & Installation</h5>
+            <p>Custom-built cold rooms engineered for efficiency, safety and compliance.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <i class="bi bi-box-seam icon"></i>
+            <h5>Commercial Refrigeration Units</h5>
+            <p>Reliable refrigeration systems for retail, hospitality and industrial use.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <i class="bi bi-shop icon"></i>
+            <h5>Retail & Foodservice Fridges</h5>
+            <p>High-performance fridges designed for visibility, hygiene and durability.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <i class="bi bi-display icon"></i>
+            <h5>Multideck & Display Cabinets</h5>
+            <p>Energy-efficient display solutions with advanced cooling technology.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <i class="bi bi-thermometer-snow icon"></i>
+            <h5>Freezer Rooms</h5>
+            <p>Precision temperature-controlled freezer rooms for critical storage needs.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <i class="bi bi-arrow-repeat icon"></i>
+            <h5>System Upgrades & Refits</h5>
+            <p>Modernise existing systems to improve performance and energy efficiency.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Highlight Cards -->
+      <div class="row g-4 mt-5">
+
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <i class="bi bi-building-check"></i>
+            <h6>Commercial Installs</h6>
+            <p>High-quality systems delivered by experienced engineers.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="highlight-card">
+            <i class="bi bi-tools"></i>
+            <h6>Maintenance Support</h6>
+            <p>Full aftercare service with emergency call-out support.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-5">
+        <p class="muted mb-3">
+          Need emergency support? Request a quote or consultation.
+        </p>
+        <a href="#contact" class="btn btn-primary btn-lg">
+          Request a Quote
+        </a>
+      </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
-<!-- PRODUCTS -->
-<!-- <section id="products" class="py-5">
+  <!-- PRODUCTS -->
+  <!-- <section id="products" class="py-5">
   <div class="container">
 
     <h3 class="fade-up">Products</h3>
@@ -348,294 +359,341 @@
 </section> -->
 
 
-<!-- PROJECTS -->
-<section id="projects" class="py-5 bg-white">
-  <div class="container">
+  <!-- PROJECTS -->
+  <section id="projects" class="py-5">
+    <div class="container">
 
-    <h3 data-aos="fade-left"  data-aos-duration="2000">Projects</h3>
-    <p class="section-lead fade-up">A selection of completed installations across the UK.</p>
+      <h3>Projects</h3>
+      <p class="section-lead fade-up">A selection of completed installations across the UK.</p>
 
-    <div class="row g-4 mt-3">
+      <div class="row g-4 mt-3">
 
-      <!-- Project 1 -->
-      <div class="col-md-4 fade-up">
-        <div class="product-card overflow-hidden h-100">
-          <img 
-            src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format" 
-            class="img-fluid" 
-            style="height:170px; object-fit:cover;"
-            alt="Cold Storage Project">
+        <!-- Project 1 -->
+        <div class="col-md-4 fade-up">
+          <div class="product-card overflow-hidden h-100">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format"
+              class="img-fluid" style="height:170px; object-fit:cover;" alt="Cold Storage Project">
 
-          <div class="p-3">
-            <h6>Cold Room Fit-Out</h6>
-            <p class="muted small mb-0">
-              Full cold-room installation for food service & retail storage.
-            </p>
+            <div class="p-3">
+              <h6>Cold Room Fit-Out</h6>
+              <p class="muted small mb-0">
+                Full cold-room installation for food service & retail storage.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project 2 -->
-      <div class="col-md-4 fade-up" style="animation-delay: .1s">
-        <div class="product-card overflow-hidden h-100">
-          <img 
-            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format" 
-            class="img-fluid" 
-            style="height:170px; object-fit:cover;"
-            alt="Pharma Cold Chain">
+        <!-- Project 2 -->
+        <div class="col-md-4 fade-up" style="animation-delay: .1s">
+          <div class="product-card overflow-hidden h-100">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format"
+              class="img-fluid" style="height:170px; object-fit:cover;" alt="Pharma Cold Chain">
 
-          <div class="p-3">
-            <h6>Pharmaceutical Cold Chain</h6>
-            <p class="muted small mb-0">
-              Precision-controlled refrigeration for medical & industrial sectors.
-            </p>
+            <div class="p-3">
+              <h6>Pharmaceutical Cold Chain</h6>
+              <p class="muted small mb-0">
+                Precision-controlled refrigeration for medical & industrial sectors.
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-4 fade-up" style="animation-delay: .2s">
+          <div class="product-card overflow-hidden h-100">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format"
+              class="img-fluid" style="height:170px; object-fit:cover;" alt="Retail Install">
+
+            <div class="p-3">
+              <h6>Retail Refrigeration Install</h6>
+              <p class="muted small mb-0">
+                In-store chilled display units & commercial refrigeration systems.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Project 3 -->
-      <div class="col-md-4 fade-up" style="animation-delay: .2s">
-        <div class="product-card overflow-hidden h-100">
-          <img 
-            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format" 
-            class="img-fluid" 
-            style="height:170px; object-fit:cover;"
-            alt="Retail Install">
+    </div>
+  </section>
 
-          <div class="p-3">
-            <h6>Retail Refrigeration Install</h6>
-            <p class="muted small mb-0">
-              In-store chilled display units & commercial refrigeration systems.
-            </p>
+
+  <!-- clients -->
+  <section class="clients-section py-5 bg-white">
+    <div class="container">
+
+      <h3 class=" mb-4">Trusted by Leading Brands</h3>
+      <p class=" text-muted mb-5">
+        We work with retailers, hospitality, and commercial clients across the UK
+      </p>
+
+      <div class="clients-slider">
+        <div class="clients-track">
+
+          <!-- logo -->
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/0f9be0/ffffff&text=NABCO" alt="NABCO">
           </div>
+
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/005b8c/ffffff&text=TESCO" alt="Tesco">
+          </div>
+
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/0a5f8f/ffffff&text=SPAR" alt="SPAR">
+          </div>
+
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/0061FF/ffffff&text=CO-OP" alt="Co-op">
+          </div>
+
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/60EFFF/003b5c&text=WHOLESALE" alt="Wholesale">
+          </div>
+
+          <!-- duplicate for seamless loop -->
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/0f9be0/ffffff&text=NABCO">
+          </div>
+
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/005b8c/ffffff&text=TESCO">
+          </div>
+
+          <div class="client-logo">
+            <img src="https://dummyimage.com/160x80/0a5f8f/ffffff&text=SPAR">
+          </div>
+
         </div>
       </div>
 
     </div>
-
-  </div>
-</section>
+  </section>
 
 
-<!-- CONTACT -->
-<section id="contact" class="py-5">
-  <div class="container">
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
 
-    <h3 class="fade-up">Request a Quote or Consultation</h3>
-    <p class="section-lead fade-up">Our team will get back to you within one working day.</p>
+      <h3 class="fade-up">Request a Quote or Consultation</h3>
+      <p class="section-lead fade-up">Our team will get back to you within one working day.</p>
 
-    <div class="row g-4 mt-3">
+      <div class="row g-4 mt-3">
 
-      <!-- Contact Form -->
-      <div class="col-md-6 fade-up">
-        <div class="contact-card p-4">
-          <form id="contactForm" novalidate>
+        <!-- Contact Form -->
+        <div class="col-md-6 fade-up">
+          <div class="contact-card p-4">
+            <form id="contactForm" novalidate>
 
-            <div class="mb-3">
-              <label class="form-label">Name *</label>
-              <input type="text" class="form-control" id="name" placeholder="Jane Smith" required>
-            </div>
+              <div class="mb-3">
+                <label class="form-label">Name *</label>
+                <input type="text" class="form-control" id="name" placeholder="Jane Smith" required>
+              </div>
 
-            <div class="mb-3">
-              <label class="form-label">Email *</label>
-              <input type="email" class="form-control" id="email" placeholder="email@website.com" required>
-            </div>
+              <div class="mb-3">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" id="email" placeholder="email@website.com" required>
+              </div>
 
-            <div class="mb-3">
-              <label class="form-label">Phone *</label>
-              <input type="tel" class="form-control" id="phone" placeholder="555-555-5555" required>
-            </div>
+              <div class="mb-3">
+                <label class="form-label">Phone *</label>
+                <input type="tel" class="form-control" id="phone" placeholder="555-555-5555" required>
+              </div>
 
-            <div class="mb-3">
-              <label class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Describe your requirement..."></textarea>
-            </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4"
+                  placeholder="Describe your requirement..."></textarea>
+              </div>
 
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" id="consent" required>
-              <label class="form-check-label small-muted" for="consent">
-                I allow this website to store my submission so they can respond to my inquiry.
-              </label>
-            </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consent" required>
+                <label class="form-check-label small-muted" for="consent">
+                  I allow this website to store my submission so they can respond to my inquiry.
+                </label>
+              </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="reset" class="btn btn-outline-secondary ms-2">Reset</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-outline-secondary ms-2">Reset</button>
 
-          </form>
-        </div>
-      </div>
-
-      <!-- Address + Newsletter -->
-      <div class="col-md-6 slide-left">
-
-        <h5>CHILLNIX Cooling Solutions</h5>
-        <p class="muted">Iseland Cooling Services Ltd • Glasgow, UK</p>
-
-        <div class="row g-3">
-          <div class="col-sm-6">
-            <div class="product-card p-3">
-              <h6><i class="bi bi-telephone-fill me-2"></i> Call Us</h6>
-              <p class="muted mb-0">+44 1234 567890</p>
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <div class="product-card p-3">
-              <h6><i class="bi bi-envelope-fill me-2"></i> Email</h6>
-              <p class="muted mb-0">hello@chillnix.co.uk</p>
-            </div>
+            </form>
           </div>
         </div>
 
-        <!-- Newsletter -->
-        <div class="mt-4">
-          <!-- <h6>Newsletter Signup</h6>
+        <!-- Address + Newsletter -->
+        <div class="col-md-6 slide-left">
 
-          <form id="newsletterForm" class="d-flex gap-2 mt-2">
-            <input type="email" class="form-control" id="newsletterEmail" placeholder="Email address" required>
-            <button class="btn btn-primary">Submit</button>
-          </form> -->
+          <h5>CHILLNIX Cooling Solutions</h5>
+          <p class="muted">Iseland Cooling Services Ltd • Glasgow, UK</p>
 
-          <h6 class="mt-4">Hours</h6>
-          <ul class="list-unstyled small-muted">
-            <li>Monday — 9:00am – 6:00pm</li>
-            <li>Tuesday — 9:00am – 6:00pm</li>
-            <li>Wednesday — 9:00am – 6:00pm</li>
-            <li>Thursday — 9:00am – 6:00pm</li>
-            <li>Friday — 9:00am – 6:00pm</li>
-            <li>Saturday — 9:00am – 6:00pm</li>
-          </ul>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="product-card p-3">
+                <h6><i class="bi bi-telephone-fill me-2"></i> Call Us</h6>
+                <p class="muted mb-0">+44 1234 567890</p>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="product-card p-3">
+                <h6><i class="bi bi-envelope-fill me-2"></i> Email</h6>
+                <p class="muted mb-0">hello@chillnix.co.uk</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="row g-3 mt-2">
+            <div class="col-sm-12 d-flex text-center flex-column">
+              <div class="product-card p-3">
+                <h6 class="mt-4">Hours</h6>
+                <ul class="list-unstyled small-muted">
+                  <li>Monday — 9:00am – 6:00pm</li>
+                  <li>Tuesday — 9:00am – 6:00pm</li>
+                  <li>Wednesday — 9:00am – 6:00pm</li>
+                  <li>Thursday — 9:00am – 6:00pm</li>
+                  <li>Friday — 9:00am – 6:00pm</li>
+                  <li>Saturday — 9:00am – 6:00pm</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+
+
+
         </div>
-
-      
       </div>
-    </div>
 
-    <div class="mt-4">
-        <iframe 
-          src="https://maps.google.com/maps?q=Glasgow&t=&z=12&ie=UTF8&iwloc=&output=embed" 
-          style="width:100%;height:200px;border:0;border-radius:12px" 
-          class="mt-3">
+      <div class="mt-4">
+        <iframe src="https://maps.google.com/maps?q=Glasgow&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          style="width:100%;height:200px;border:0;border-radius:12px" class="mt-3">
         </iframe>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="mt-4 py-4">
-  <div class="container">
-    <div class="row gy-3 align-items-center">
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
 
-      <div class="col-md-4">
-        <img src="./images/logo.png" style="max-width:180px;">
+        <div class="col-md-4">
+          <img src="./images/logo.png" style="max-width:180px;">
+        </div>
+
+        <div class="col-md-4 text-center small-muted">
+          © Iseland Cooling Services Ltd <br>
+          Trading as CHILLNIX Cooling Solutions <br>
+          Glasgow, UK
+        </div>
+
+        <div class="col-md-4 text-md-end small-muted">
+          Web Design By <strong>AZENIX</strong>
+        </div>
+
       </div>
-
-      <div class="col-md-4 text-center small-muted">
-        © Iseland Cooling Services Ltd <br>
-        Trading as CHILLNIX Cooling Solutions <br>
-        Glasgow, UK
-      </div>
-
-      <div class="col-md-4 text-md-end small-muted">
-        Web Design By <strong>AZENIX</strong>
-      </div>
-
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./index.js"></script>
- 
-<!-- SNOW SCRIPT -->
-<script>
-(function() {
-  const canvas = document.getElementById('snow-canvas');
-  const ctx = canvas.getContext('2d');
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./webapps/index.js"></script>
 
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener("resize", resize);
+  <!-- SNOW SCRIPT -->
+  <script>
+    (function () {
+      const canvas = document.getElementById('snow-canvas');
+      const ctx = canvas.getContext('2d');
 
-  const flakes = [];
-  const maxFlakes = Math.min(140, Math.floor(window.innerWidth / 6));
-
-  function createFlake() {
-    return {
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 3 + 1,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: Math.random() * 1 + 0.5,
-      opacity: Math.random() * 0.9 + 0.3
-    };
-  }
-
-  for (let i = 0; i < maxFlakes; i++) flakes.push(createFlake());
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    flakes.forEach(f => {
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(255,255,255,${f.opacity})`;
-      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Movement
-      f.x += f.vx;
-      f.y += f.vy;
-
-      if (f.y > canvas.height + 10) {
-        Object.assign(f, createFlake(), { y: -10 });
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
       }
+      resize();
+      window.addEventListener("resize", resize);
+
+      const flakes = [];
+      const maxFlakes = Math.min(140, Math.floor(window.innerWidth / 6));
+
+      function createFlake() {
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 3 + 1,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: Math.random() * 1 + 0.5,
+          opacity: Math.random() * 0.9 + 0.3
+        };
+      }
+
+      for (let i = 0; i < maxFlakes; i++) flakes.push(createFlake());
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        flakes.forEach(f => {
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(255,255,255,${f.opacity})`;
+          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Movement
+          f.x += f.vx;
+          f.y += f.vy;
+
+          if (f.y > canvas.height + 10) {
+            Object.assign(f, createFlake(), { y: -10 });
+          }
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+  </script>
+
+  <!-- ACTIVE NAVIGATION JS -->
+  <script>
+    const sections = document.querySelectorAll("section, header");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let pos = window.scrollY + 140;
+      sections.forEach(sec => {
+        if (sec.offsetTop <= pos && sec.offsetTop + sec.offsetHeight > pos) {
+          navLinks.forEach(a => a.classList.remove("active"));
+          const target = document.querySelector(`a[href="#${sec.id}"]`);
+          if (target) target.classList.add("active");
+        }
+      });
     });
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-</script>
+  </script>
 
-<!-- ACTIVE NAVIGATION JS -->
-<script>
-const sections = document.querySelectorAll("section, header");
-const navLinks = document.querySelectorAll(".nav-link");
+  <!-- FORM HANDLING -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert("Thanks! Your message has been submitted.");
+      this.reset();
+    });
 
-window.addEventListener("scroll", () => {
-  let pos = window.scrollY + 140;
-  sections.forEach(sec => {
-    if(sec.offsetTop <= pos && sec.offsetTop + sec.offsetHeight > pos) {
-      navLinks.forEach(a => a.classList.remove("active"));
-      const target = document.querySelector(`a[href="#${sec.id}"]`);
-      if(target) target.classList.add("active");
-    }
-  });
-});
-</script>
+    document.getElementById('newsletterForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert("Subscribed: " + document.getElementById("newsletterEmail").value);
+      this.reset();
+    });
+  </script>
 
-<!-- FORM HANDLING -->
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert("Thanks! Your message has been submitted.");
-  this.reset();
-});
-
-document.getElementById('newsletterForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert("Subscribed: " + document.getElementById("newsletterEmail").value);
-  this.reset();
-});
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
+
 </html>

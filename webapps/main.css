@@ -1,0 +1,108 @@
+    :root{
+      --ice-1: #55c4fb;
+      --ice-2: #d9f0ff;
+      --ice-3: #bfeeff;
+      --blue-1: #0a5f8f;
+      --blue-2: #0f9be0;
+      --blue-3: #005b8c;
+      --accent: #66c6ff;
+      --glass: rgba(255,255,255,0.12);
+      --muted: rgba(3,48,75,0.65);
+      --card-shadow: 0 12px 30px rgba(10,88,120,0.08);
+      --bg-gradient: linear-gradient(90deg, #0061FF, #60EFFF);
+    }
+
+    /* ---------- Base ---------- */
+    body {
+      font-family: Inter, sans-serif;
+      /* background: linear-gradient(180deg, var(--ice-1), #f4fbff); */
+      margin: 0;
+      color: #043042;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h4, h5, h6 {
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--blue-1);
+      margin-bottom: .6rem;
+    }
+    h3{
+        color: var(--blue-3);
+    }
+
+    /* Gradient Hero Title */
+    .title {
+      font-weight: 800 !important;
+      background: linear-gradient(90deg, var(--blue-1), var(--blue-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
+    }
+
+    /* Section Title Accent */
+    section h3, section h2 {
+      position: relative;
+      font-weight: 800;
+      font-size: 2rem;
+      padding-left: 20px;
+    }
+    section h3::before, section h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 28px;
+      background: linear-gradient(180deg, var(--blue-2), var(--accent));
+      border-radius: 4px;
+      opacity: .9;
+    }
+
+    /* Snow Canvas */
+    #snow-canvas {
+      position: fixed;
+      top:0; left:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+      z-index: 9999;
+      opacity: 0.9;
+    }
+
+    /* Navbar */
+    .navbar {
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.75);
+      border-bottom: 1px solid #d9f0ff;
+    }
+    .navbar-brand { font-weight: 800; color: var(--blue-1); }
+    .nav-link { font-weight: 600; color: var(--blue-1) !important; }
+    .nav-link.active {
+      color: var(--blue-2) !important;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+    }
+
+
+   
+
+
+
+    /* Footer */    
+    footer {
+      background: linear-gradient(180deg, var(--ice-1), #f4fbff);
+      border-top: 1px solid #d9f0ff;
+    }
+    .footer {
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    
+
+
+
+
+
+

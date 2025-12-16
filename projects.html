@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Projects | Chillnix Cooling Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ================= THEME ================= */
+:root{
+  --ice-1:#55c4fb;
+  --ice-2:#d9f0ff;
+  --ice-3:#bfeeff;
+  --blue-1:#0a5f8f;
+  --blue-2:#0f9be0;
+  --blue-3:#005b8c;
+  --accent:#66c6ff;
+  --glass:rgba(255,255,255,.12);
+  --muted:rgba(3,48,75,.65);
+  --card-shadow:0 12px 30px rgba(10,88,120,.08);
+  --bg-gradient:linear-gradient(90deg,#0061FF,#60EFFF);
+}
+
+/* ================= BASE ================= */
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(180deg,#ffffff,#f2faff);
+  color:#043042;
+}
+
+/* ================= HEADER ================= */
+.page-header{
+  background:var(--bg-gradient);
+  color:#fff;
+  padding:90px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.page-header::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  /* background:radial-gradient(circle at top,rgba(255,255,255,.35),transparent 60%); */
+}
+.page-header h1{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+}
+.page-header p{
+  max-width:680px;
+  margin:10px auto 0;
+  opacity:.95;
+}
+
+/* ================= PROJECT CARD ================= */
+.project-card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.92),
+    rgba(255,255,255,.75)
+  );
+  backdrop-filter:blur(14px);
+  border-radius:22px;
+  box-shadow:var(--card-shadow);
+  border:1px solid rgba(255,255,255,.6);
+  overflow:hidden;
+  transition:.45s ease;
+  height:100%;
+}
+
+.project-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 35px 70px rgba(0,97,255,.28);
+}
+
+/* Image */
+.project-img{
+  height:220px;
+  overflow:hidden;
+}
+.project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.6s ease;
+}
+.project-card:hover img{
+  transform:scale(1.08);
+}
+
+/* Content */
+.project-body{
+  padding:26px;
+}
+.project-body h5{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  color:var(--blue-3);
+}
+.project-body p{
+  font-size:14.5px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* Badge */
+.project-badge{
+  display:inline-block;
+  background:rgba(102,198,255,.2);
+  color:var(--blue-3);
+  font-size:12px;
+  font-weight:600;
+  padding:6px 14px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+
+/* Link */
+.project-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  font-size:14px;
+  color:var(--blue-2);
+  text-decoration:none;
+  margin-top:10px;
+}
+.project-link:hover{
+  text-decoration:underline;
+}
+
+/* ================= SECTION INTRO ================= */
+.section-intro{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 60px;
+}
+.section-intro h3{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  color:var(--blue-1);
+}
+.section-intro p{
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<section class="page-header">
+  <div class="container position-relative">
+    <h1>Innovative Cooling Solutions</h1>
+    <p>Your partner in refrigeration excellence — delivering tailored, energy-efficient systems across the UK.</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="py-5">
+  <div class="container">
+
+    <div class="section-intro">
+      <h3>Tailored Cooling Solutions</h3>
+      <p>Customized refrigeration systems designed for supermarkets, food chains, and retail businesses.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1582719478176-7c6f6d5a4b33">
+          </div>
+          <div class="project-body">
+            <span class="project-badge">Supermarket</span>
+            <h5>Strawberry Garden, Glasgow</h5>
+            <p>
+              CHILLNIX supplied and installed walk-in cold rooms, glass-door freezers,
+              and multi-deck chillers for one of Glasgow’s largest Asian supermarkets,
+              delivering a high-capacity, energy-efficient refrigeration system aligned
+              with food safety standards.
+            </p>
+            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+          </div>
+          <div class="project-body">
+            <span class="project-badge">Food Chain</span>
+            <h5>Refrigeration Installations for Chilo’s – Glasgow</h5>
+            <p>
+              Delivered and installed cold rooms, chillers, and freezers for one of the UK’s
+              fastest-growing food chains, supporting multi-location expansion with
+              scalable and reliable refrigeration solutions.
+            </p>
+            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e">
+          </div>
+          <div class="project-body">
+            <span class="project-badge">Restaurant</span>
+            <h5>Pepe’s – Edinburgh</h5>
+            <p>
+              Installed a complete refrigeration package for Pepe’s, ensuring efficient,
+              reliable cooling systems capable of handling high-volume operations
+              in a busy food service environment.
+            </p>
+            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb">
+          </div>
+          <div class="project-body">
+            <span class="project-badge">Retail</span>
+            <h5>Energy-Efficient Convenience Store Upgrade</h5>
+            <p>
+              Transformed a local convenience store into a greener retail space by
+              upgrading refrigeration systems to improve energy efficiency,
+              reduce operational costs, and enhance product visibility.
+            </p>
+            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

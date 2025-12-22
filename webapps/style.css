@@ -380,17 +380,29 @@
 .social-icon:hover::after{
   opacity:1;
 }
-
+.fa-whatsapp:before {
+    content: "\f232";
+    color: white !important;
+}
+.fa-instagram:before {
+    content: "\f16d";
+    color: white !important;
+}
+.fa-linkedin-in:before {
+    content: "\f0e1";
+    color: white !important;
+}
 /* ================= BRAND COLORS (ICY VERSION) ================= */
 .social-icon.whatsapp{
   background: linear-gradient(135deg, #25D366, #1da851);
+  color: #fff;
 }
 
 .social-icon.instagram{
   background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
 }
 
-.social-icon.tiktok{
+.social-icon.linkedin{
   background: linear-gradient(135deg, #000000, var(--blue-2));
 }
 
@@ -398,4 +410,180 @@
 .social-icon:hover{
   transform: translateY(-8px) scale(1.08);
   box-shadow: 0 18px 35px rgba(1, 94, 255, 0.25);
+}
+
+
+
+
+/* ================= RESPONSIVE FIXES ================= */
+
+/* ---------- Large Tablets & Small Laptops ---------- */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .carousel-item img {
+    height: 380px;
+  }
+
+  .clients-track {
+    gap: 40px;
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+
+  /* Hero */
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .carousel-item img {
+    height: 320px;
+  }
+
+  .glass {
+    padding: 22px;
+  }
+
+  /* Services */
+  .service-card {
+    padding: 24px;
+  }
+
+  /* Clients */
+  .client-logo {
+    min-width: 160px;
+    height: 80px;
+  }
+
+  .client-logo img {
+    width: 120px;
+  }
+}
+
+/* ---------- Mobile (Landscape + Portrait) ---------- */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero {
+    padding: 40px 12px;
+    text-align: center;
+  }
+
+  .carousel-item img {
+    height: 260px;
+  }
+
+  .chip {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  /* Section spacing */
+  #services,
+  #projects,
+  #contact,
+  #about {
+    padding: 50px 0;
+  }
+
+  /* Cards */
+  .service-card,
+  .product-card,
+  .contact-card,
+  .about-card {
+    padding: 20px;
+  }
+
+  /* About cards stack */
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Clients slider */
+  .clients-track {
+    gap: 30px;
+    animation-duration: 30s;
+  }
+
+  .client-logo {
+    min-width: 140px;
+    height: 70px;
+  }
+
+  .client-logo img {
+    width: 110px;
+  }
+
+  /* Social icons */
+  .social-icons {
+    justify-content: center;
+    gap: 15px;
+  }
+  .btn-group-lg>.btn, .btn-lg {
+    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-border-radius: var(--bs-border-radius-lg);
+}
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 480px) {
+
+  /* Hero */
+  .hero {
+    padding: 35px 10px;
+  }
+
+  .carousel-item img {
+    height: 220px;
+  }
+
+  /* Buttons */
+  .slice {
+    font-size: 11px;
+    padding: 0.45em 0.9em;
+  }
+
+  /* Services */
+  .service-card h5 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Clients */
+  .clients-track {
+    gap: 24px;
+    animation-duration: 25s;
+  }
+
+  .client-logo {
+    min-width: 120px;
+    height: 65px;
+  }
+
+  .client-logo img {
+    width: 100px;
+  }
+
+  /* Social icons */
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+  .btn-group-lg>.btn, .btn-lg {
+    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-border-radius: var(--bs-border-radius-lg);
+}
 }

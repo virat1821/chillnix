@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Projects | Chillnix Cooling Solutions</title>
@@ -11,7 +12,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -36,7 +39,11 @@
       scroll-behavior: smooth;
     }
 
-    h1, h2, h4, h5, h6 {
+    h1,
+    h2,
+    h4,
+    h5,
+    h6 {
       font-family: Montserrat, sans-serif;
       font-weight: 700;
       letter-spacing: 0.3px;
@@ -93,8 +100,8 @@
 
     .project-card {
       background: linear-gradient(180deg,
-        rgba(255, 255, 255, .92),
-        rgba(255, 255, 255, .75));
+          rgba(255, 255, 255, .92),
+          rgba(255, 255, 255, .75));
       backdrop-filter: blur(14px);
       border-radius: 22px;
       box-shadow: var(--card-shadow);
@@ -219,14 +226,14 @@
 
     #modalMedia {
       flex: 0 0 auto;
-      max-height: 55vh;
+      max-height: 30vh;
       margin-bottom: 18px;
     }
 
     #modalMedia video,
     #modalMedia img {
       width: 100%;
-      max-height: 55vh;
+      max-height: 30vh;
       height: auto;
       display: block;
       object-fit: contain;
@@ -250,8 +257,15 @@
     }
 
     @keyframes zoomIn {
-      from { transform: scale(.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+      from {
+        transform: scale(.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .modal-close {
@@ -284,6 +298,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Snow Canvas -->
@@ -336,15 +351,16 @@
           <div class="project-card">
             <div class="project-img video-wrap" data-index="0" onclick="handleVideoClick(event, this)">
               <video muted preload="none" poster="./images/projects/thumb-one.png">
-  <source src="./images/projects/straberry-garden.mp4" type="video/mp4">
-</video>
+                <source src="./images/projects/straberry-garden.mp4" type="video/mp4">
+              </video>
               <div class="play-overlay">▶</div>
             </div>
             <div class="project-body">
               <span class="project-badge">Supermarket</span>
               <h5>Strawberry Garden, Glasgow</h5>
               <p>High-capacity refrigeration system for a large Asian supermarket.</p>
-              <a href="#" class="project-link" onclick="openModal(0); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="project-link" onclick="openModal(0); return false;">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -352,14 +368,15 @@
         <!-- Project 2 (VIDEO) -->
         <div class="col-lg-6">
           <div class="project-card">
-           <div class="project-img">
-              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb" alt="Retail Store Upgrade">
+            <div class="project-img">
+              <img src="./images/projects/chilos.jpeg" alt="Retail Store Upgrade">
             </div>
             <div class="project-body">
               <span class="project-badge">Food Chain</span>
               <h5>Chilo’s – Glasgow</h5>
               <p>Scalable refrigeration systems for multi-location expansion.</p>
-              <a href="#" class="project-link" onclick="openModal(1); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="project-link" onclick="openModal(1); return false;">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -368,13 +385,14 @@
         <div class="col-lg-6">
           <div class="project-card">
             <div class="project-img">
-              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="Pepe’s – Edinburgh">
+              <img src="./images/projects/pepe’s.png" alt="Pepe’s – Edinburgh">
             </div>
             <div class="project-body">
               <span class="project-badge">Restaurant</span>
               <h5>Pepe’s – Edinburgh</h5>
               <p>Complete refrigeration package for high-volume restaurant use.</p>
-              <a href="#" class="project-link" onclick="openModal(2); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="project-link" onclick="openModal(2); return false;">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -382,8 +400,8 @@
         <!-- Project 4 -->
         <div class="col-lg-6">
           <div class="project-card">
-            
-                 <div class="project-img video-wrap" data-index="1" onclick="handleVideoClick(event, this)">
+
+            <div class="project-img video-wrap" data-index="1" onclick="handleVideoClick(event, this)">
               <video muted preload="metadata" poster="./images/projects/thumb-two.png">
                 <source src="./images/projects/green-retail.mp4" type="video/mp4">
               </video>
@@ -393,7 +411,8 @@
               <span class="project-badge">Retail</span>
               <h5>Energy-Efficient Store Upgrade</h5>
               <p>Reduced energy costs with modern refrigeration systems.</p>
-              <a href="#" class="project-link" onclick="openModal(3); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="project-link" onclick="openModal(3); return false;">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -493,23 +512,23 @@
         title: "Strawberry Garden, Glasgow: Premier Asian Supermarket with State-of-the-Art Refrigeration Solutions",
         text: "Strawberry Garden in Glasgow is one of the largest Asian supermarkets in the area, featuring a full range of cold rooms and refrigeration cabinets supplied and installed to support its extensive fresh and frozen product selection."
       },
-    {
-  type: "video",
-  src: "./images/projects/project2.mp4",
-  poster: "./images/projects/project2-thumb.jpg",
-  title: "Refrigeration Installations for Chilo’s – Glasgow",
-  text: "CHILLNIX Cooling Solutions partnered with Chilo’s, one of the fastest-growing food chains in the UK, to deliver high-quality refrigeration systems across multiple locations, starting with their flagship site in Glasgow.\n\nProject scope included:\n- Installation of compact, high-efficiency cold rooms for ingredient storage\n- Bespoke chilled display cabinets tailored to fast-service environments\n- Low-maintenance, energy-saving freezer units\n- Scalable refrigeration solutions designed for rapid rollout across new branches\n\nOur work with Chilo’s reflects our ability to support expanding brands with consistent, reliable refrigeration infrastructure tailored to high-demand food service operations."
-},
+      {
+        type: "image",
+        src: "./images/projects/chilos.jpeg",
+        poster: "./images/projects/project2-thumb.jpg",
+        title: "Refrigeration Installations for Chilo’s – Glasgow",
+        text: "CHILLNIX Cooling Solutions partnered with Chilo’s, one of the fastest-growing food chains in the UK, to deliver high-quality refrigeration systems across multiple locations, starting with their flagship site in Glasgow.\n\nProject scope included:\n- Installation of compact, high-efficiency cold rooms for ingredient storage\n- Bespoke chilled display cabinets tailored to fast-service environments\n- Low-maintenance, energy-saving freezer units\n- Scalable refrigeration solutions designed for rapid rollout across new branches\n\nOur work with Chilo’s reflects our ability to support expanding brands with consistent, reliable refrigeration infrastructure tailored to high-demand food service operations."
+      },
 
       {
         type: "image",
-        src: "https://images.unsplash.com/photo-1542838132-92c53300491e",
+        src: "./images/projects/pepe’s.png",
         title: "Delivered and installed a full refrigeration package for pepe’s in edinburgh",
         text: "CHILLNIX Cooling Solutions successfully delivered and installed a comprehensive refrigeration package for Pepe’s, a renowned food chain in Edinburgh. Our team equipped the establishment with state-of-the-art cold rooms, under-counter chillers, and display fridges designed to meet the fast-paced demands of the restaurant. By integrating our energy-efficient cooling solutions, Pepe’s now enjoys a reliable refrigeration system that enhances food storage and presentation, ensuring their customers receive the freshest meals possible. With our expertise, we supported their operational needs while maintaining the highest standards of efficiency and performance."
       },
       {
-        type: "image",
-        src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb",
+        type: "video",
+        src: "./images/projects/green-retail.mp4",
         title: "Transformed a local convenience store into an energy-efficient green retail space",
         text: "CHILLNIX Cooling Solutions partnered with a local convenience store to overhaul their refrigeration system, focusing on energy efficiency and sustainability. We installed state-of-the-art refrigeration cabinets equipped with energy-efficient technology, reducing the store's energy consumption by 30%. Our team also provided a comprehensive training program for the staff on best practices for energy management, ensuring continued savings and eco-friendly operations. The transformation not only cut costs but also enhanced the store's appeal to environmentally conscious consumers, ultimately boosting foot traffic and sales."
       }
@@ -588,4 +607,5 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -1,47 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Projects | Chillnix Cooling Solutions</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./webapps/main.css">
+  <meta charset="utf-8">
+  <title>Projects | Chillnix Cooling Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./webapps/main.css">
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-<style>
-/* ================= THEME ================= */
-:root{
-  --ice-1:#55c4fb;
-  --ice-2:#d9f0ff;
-  --ice-3:#bfeeff;
-  --blue-1:#0a5f8f;
-  --blue-2:#0f9be0;
-  --blue-3:#005b8c;
-  --accent:#66c6ff;
-  --glass:rgba(255,255,255,.12);
-  --muted:rgba(3,48,75,.65);
-  --card-shadow:0 12px 30px rgba(10,88,120,.08);
-  --bg-gradient:linear-gradient(90deg,#0061FF,#60EFFF);
-}
+  <style>
+    :root {
+      --ice-1: #55c4fb;
+      --ice-2: #d9f0ff;
+      --ice-3: #bfeeff;
+      --blue-1: #0a5f8f;
+      --blue-2: #0f9be0;
+      --blue-3: #005b8c;
+      --accent: #66c6ff;
+      --glass: rgba(255, 255, 255, .12);
+      --muted: rgba(3, 48, 75, .65);
+      --card-shadow: 0 12px 30px rgba(10, 88, 120, .08);
+      --bg-gradient: linear-gradient(90deg, #0061FF, #60EFFF);
+    }
 
-/* ================= BASE ================= */
-body{
-  font-family:'Inter',sans-serif;
-  background:linear-gradient(180deg,#ffffff,#f2faff);
-  color:#043042;
-}
-
-    /* ---------- Base ---------- */
     body {
-      font-family: Inter, sans-serif;
-      /* background: linear-gradient(180deg, var(--ice-1), #f4fbff); */
-      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #ffffff, #f2faff);
       color: #043042;
+      margin: 0;
       scroll-behavior: smooth;
     }
 
@@ -52,157 +43,258 @@ body{
       color: var(--blue-1);
       margin-bottom: .6rem;
     }
-    h3{
-        color: var(--blue-3);
+
+    h3 {
+      color: var(--blue-3);
     }
 
-
-    /* Navbar */
     .navbar {
       backdrop-filter: blur(8px);
-      background: rgba(255,255,255,0.75);
+      background: rgba(255, 255, 255, 0.75);
       border-bottom: 1px solid #d9f0ff;
     }
-    .navbar-brand { font-weight: 800; color: var(--blue-1); }
-    .nav-link { font-weight: 600; color: var(--blue-1) !important; }
+
+    .navbar-brand {
+      font-weight: 800;
+      color: var(--blue-1);
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: var(--blue-1) !important;
+    }
+
     .nav-link.active {
       color: var(--blue-2) !important;
       text-decoration: underline;
       text-underline-offset: 8px;
     }
 
+    .page-header {
+      background: var(--bg-gradient);
+      color: #fff;
+      padding: 90px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-/* ================= HEADER ================= */
-.page-header{
-  background:var(--bg-gradient);
-  color:#fff;
-  padding:90px 0;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-.page-header::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  /* background:radial-gradient(circle at top,rgba(255,255,255,.35),transparent 60%); */
-}
-.page-header h1{
-  font-family:'Montserrat',sans-serif;
-  font-weight:800;
-  color: white !important;
-}
-.page-header p{
-  max-width:680px;
-  margin:10px auto 0;
-  opacity:.95;
-}
+    .page-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: white !important;
+    }
 
-/* ================= PROJECT CARD ================= */
-.project-card{
-  background:linear-gradient(
-    180deg,
-    rgba(255,255,255,.92),
-    rgba(255,255,255,.75)
-  );
-  backdrop-filter:blur(14px);
-  border-radius:22px;
-  box-shadow:var(--card-shadow);
-  border:1px solid rgba(255,255,255,.6);
-  overflow:hidden;
-  transition:.45s ease;
-  height:100%;
-}
+    .page-header p {
+      max-width: 680px;
+      margin: 10px auto 0;
+      opacity: .95;
+    }
 
-.project-card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 35px 70px rgba(0,97,255,.28);
-}
+    .project-card {
+      background: linear-gradient(180deg,
+        rgba(255, 255, 255, .92),
+        rgba(255, 255, 255, .75));
+      backdrop-filter: blur(14px);
+      border-radius: 22px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid rgba(255, 255, 255, .6);
+      overflow: hidden;
+      transition: .45s ease;
+      height: 100%;
+    }
 
-/* Image */
-.project-img{
-  height:220px;
-  overflow:hidden;
-}
-.project-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.6s ease;
-}
-.project-card:hover img{
-  transform:scale(1.08);
-}
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 35px 70px rgba(0, 97, 255, .28);
+    }
 
-/* Content */
-.project-body{
-  padding:26px;
-}
-.project-body h5{
-  font-family:'Montserrat',sans-serif;
-  font-weight:700;
-  color:var(--blue-3);
-}
-.project-body p{
-  font-size:14.5px;
-  color:var(--muted);
-  line-height:1.6;
-}
+    .project-img {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
 
-/* Badge */
-.project-badge{
-  display:inline-block;
-  background:rgba(102,198,255,.2);
-  color:var(--blue-3);
-  font-size:12px;
-  font-weight:600;
-  padding:6px 14px;
-  border-radius:999px;
-  margin-bottom:10px;
-}
+    .project-img img,
+    .project-img video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .6s ease;
+      display: block;
+    }
 
-/* Link */
-.project-link{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  font-weight:600;
-  font-size:14px;
-  color:var(--blue-2);
-  text-decoration:none;
-  margin-top:10px;
-}
-.project-link:hover{
-  text-decoration:underline;
-}
+    .project-card:hover img,
+    .project-card:hover video {
+      transform: scale(1.08);
+    }
 
-/* ================= SECTION INTRO ================= */
-.section-intro{
-  /* text-align:center; */
-  max-width:720px;
-  /* margin:0 auto 60px; */
-}
-.section-intro h3{
-  font-family:'Montserrat',sans-serif;
-  font-weight:800;
-  color:var(--blue-1);
-}
-.section-intro p{
-  color:var(--muted);
-}
-</style>
+    .project-body {
+      padding: 26px;
+    }
+
+    .project-body h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--blue-3);
+    }
+
+    .project-body p {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-badge {
+      display: inline-block;
+      background: rgba(102, 198, 255, .2);
+      color: var(--blue-3);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--blue-2);
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .video-wrap {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, .35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 48px;
+      transition: .3s;
+      pointer-events: none;
+    }
+
+    .video-wrap.playing .play-overlay {
+      opacity: 0;
+    }
+
+    .project-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .project-modal-box {
+      background: #fff;
+      max-width: 640px;
+      width: 92%;
+      padding: 30px;
+      border-radius: 20px;
+      animation: zoomIn .35s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+      overflow: hidden;
+    }
+
+    #modalMedia {
+      flex: 0 0 auto;
+      max-height: 55vh;
+      margin-bottom: 18px;
+    }
+
+    #modalMedia video,
+    #modalMedia img {
+      width: 100%;
+      max-height: 55vh;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    #modalTitle,
+    #modalText {
+      margin-bottom: 8px;
+    }
+
+    #modalText {
+      flex: 1 1 auto;
+      overflow-y: auto;
+    }
+
+    .modal-nav {
+      flex: 0 0 auto;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .modal-nav button {
+      background: var(--blue-2);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 999px;
+    }
+
+    #snow-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.9;
+    }
+
+    .small-muted {
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
 </head>
-
 <body>
 
-   <!-- Snow Canvas -->
+  <!-- Snow Canvas -->
   <canvas id="snow-canvas"></canvas>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img style="width: 100px; height: 65px;" src="./images/logo.png" alt="logo"
-          srcset=""> </a>
+      <a class="navbar-brand" href="#">
+        <img style="width: 100px; height: 65px;" src="./images/logo.png" alt="logo">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
         <span><i class="bi bi-list"></i></span>
       </button>
@@ -213,138 +305,136 @@ body{
           <li class="nav-item"><a class="nav-link" href="./index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="./index.html#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="./index.html#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./projects.html">Projects</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary ms-2" href="./index.html#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-<!-- HEADER -->
-<section class="page-header">
-  <div class="container position-relative">
-    <h1>Innovative Cooling Solutions</h1>
-    <p>Your partner in refrigeration excellence — delivering tailored, energy-efficient systems across the UK.</p>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="py-5">
-  <div class="container">
-
-    <div class="section-intro">
-      <h3>Tailored Cooling Solutions</h3>
-      <p>Customized refrigeration systems designed for supermarkets, food chains, and retail businesses.</p>
+  <!-- HEADER -->
+  <section class="page-header">
+    <div class="container position-relative">
+      <h1>Innovative Cooling Solutions</h1>
+      <p>Your partner in refrigeration excellence — delivering tailored, energy-efficient systems across the UK.</p>
     </div>
+  </section>
 
-    <div class="row g-4">
+  <!-- PROJECTS -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-intro">
+        <h3>Tailored Cooling Solutions</h3>
+        <p>Customized refrigeration systems designed for supermarkets, food chains, and retail businesses.</p>
+      </div>
 
-      <!-- Project 1 -->
-      <div class="col-lg-6">
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1582719478176-7c6f6d5a4b33">
+      <div class="row g-4">
+        <!-- Project 1 (VIDEO) -->
+        <div class="col-lg-6">
+          <div class="project-card">
+            <div class="project-img video-wrap" data-index="0" onclick="handleVideoClick(event, this)">
+              <video muted preload="none" poster="./images/projects/thumb-one.png">
+  <source src="./images/projects/straberry-garden.mp4" type="video/mp4">
+</video>
+              <div class="play-overlay">▶</div>
+            </div>
+            <div class="project-body">
+              <span class="project-badge">Supermarket</span>
+              <h5>Strawberry Garden, Glasgow</h5>
+              <p>High-capacity refrigeration system for a large Asian supermarket.</p>
+              <a href="#" class="project-link" onclick="openModal(0); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
-          <div class="project-body">
-            <span class="project-badge">Supermarket</span>
-            <h5>Strawberry Garden, Glasgow</h5>
-            <p>
-              CHILLNIX supplied and installed walk-in cold rooms, glass-door freezers,
-              and multi-deck chillers for one of Glasgow’s largest Asian supermarkets,
-              delivering a high-capacity, energy-efficient refrigeration system aligned
-              with food safety standards.
-            </p>
-            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <!-- Project 2 (VIDEO) -->
+        <div class="col-lg-6">
+          <div class="project-card">
+           <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb" alt="Retail Store Upgrade">
+            </div>
+            <div class="project-body">
+              <span class="project-badge">Food Chain</span>
+              <h5>Chilo’s – Glasgow</h5>
+              <p>Scalable refrigeration systems for multi-location expansion.</p>
+              <a href="#" class="project-link" onclick="openModal(1); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-lg-6">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="Pepe’s – Edinburgh">
+            </div>
+            <div class="project-body">
+              <span class="project-badge">Restaurant</span>
+              <h5>Pepe’s – Edinburgh</h5>
+              <p>Complete refrigeration package for high-volume restaurant use.</p>
+              <a href="#" class="project-link" onclick="openModal(2); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-lg-6">
+          <div class="project-card">
+            
+                 <div class="project-img video-wrap" data-index="1" onclick="handleVideoClick(event, this)">
+              <video muted preload="metadata" poster="./images/projects/thumb-two.png">
+                <source src="./images/projects/green-retail.mp4" type="video/mp4">
+              </video>
+              <div class="play-overlay">▶</div>
+            </div>
+            <div class="project-body">
+              <span class="project-badge">Retail</span>
+              <h5>Energy-Efficient Store Upgrade</h5>
+              <p>Reduced energy costs with modern refrigeration systems.</p>
+              <a href="#" class="project-link" onclick="openModal(3); return false;">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Project 2 -->
-      <div class="col-lg-6">
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-          </div>
-          <div class="project-body">
-            <span class="project-badge">Food Chain</span>
-            <h5>Refrigeration Installations for Chilo’s – Glasgow</h5>
-            <p>
-              Delivered and installed cold rooms, chillers, and freezers for one of the UK’s
-              fastest-growing food chains, supporting multi-location expansion with
-              scalable and reliable refrigeration solutions.
-            </p>
-            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="col-lg-6">
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e">
-          </div>
-          <div class="project-body">
-            <span class="project-badge">Restaurant</span>
-            <h5>Pepe’s – Edinburgh</h5>
-            <p>
-              Installed a complete refrigeration package for Pepe’s, ensuring efficient,
-              reliable cooling systems capable of handling high-volume operations
-              in a busy food service environment.
-            </p>
-            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="col-lg-6">
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb">
-          </div>
-          <div class="project-body">
-            <span class="project-badge">Retail</span>
-            <h5>Energy-Efficient Convenience Store Upgrade</h5>
-            <p>
-              Transformed a local convenience store into a greener retail space by
-              upgrading refrigeration systems to improve energy efficiency,
-              reduce operational costs, and enhance product visibility.
-            </p>
-            <a href="#" class="project-link">Learn more <i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-
     </div>
+  </section>
 
-  </div>
-</section>
-
- <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="py-4">
     <div class="container">
       <div class="row gy-3 align-items-center">
-
         <div class="col-md-4">
-          <img src="./images/logo.png" style="max-width:180px;">
+          <img src="./images/logo.png" style="max-width:180px;" alt="Chillnix logo">
         </div>
-
         <div class="col-md-4 text-center small-muted">
           © Iseland Cooling Services Ltd <br>
           Trading as CHILLNIX Cooling Solutions <br>
           Glasgow, UK
         </div>
-
         <div class="col-md-4 text-md-end small-muted">
           Web Design By <strong><a href="https://azenix.co.uk/">AZENIX</a></strong>
         </div>
-
       </div>
     </div>
   </footer>
 
-<!-- SNOW SCRIPT -->
+  <!-- TEXT / MEDIA MODAL -->
+  <div class="project-modal" id="projectModal">
+    <div class="project-modal-box">
+      <span class="modal-close" onclick="closeModal()">×</span>
+      <div id="modalMedia"></div>
+      <h4 id="modalTitle"></h4>
+      <p id="modalText"></p>
+      <div class="modal-nav">
+        <button onclick="navigate(-1)">← Prev</button>
+        <button onclick="navigate(1)">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SNOW SCRIPT -->
   <script>
     (function () {
       const canvas = document.getElementById('snow-canvas');
@@ -381,7 +471,6 @@ body{
           ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
           ctx.fill();
 
-          // Movement
           f.x += f.vx;
           f.y += f.vy;
 
@@ -394,5 +483,109 @@ body{
       draw();
     })();
   </script>
+
+  <script>
+    const projects = [
+      {
+        type: "video",
+        src: "./images/projects/straberry-garden.mp4",
+        poster: "./images/projects/straberry-garden-thumb.jpg",
+        title: "Strawberry Garden, Glasgow: Premier Asian Supermarket with State-of-the-Art Refrigeration Solutions",
+        text: "Strawberry Garden in Glasgow is one of the largest Asian supermarkets in the area, featuring a full range of cold rooms and refrigeration cabinets supplied and installed to support its extensive fresh and frozen product selection."
+      },
+    {
+  type: "video",
+  src: "./images/projects/project2.mp4",
+  poster: "./images/projects/project2-thumb.jpg",
+  title: "Refrigeration Installations for Chilo’s – Glasgow",
+  text: "CHILLNIX Cooling Solutions partnered with Chilo’s, one of the fastest-growing food chains in the UK, to deliver high-quality refrigeration systems across multiple locations, starting with their flagship site in Glasgow.\n\nProject scope included:\n- Installation of compact, high-efficiency cold rooms for ingredient storage\n- Bespoke chilled display cabinets tailored to fast-service environments\n- Low-maintenance, energy-saving freezer units\n- Scalable refrigeration solutions designed for rapid rollout across new branches\n\nOur work with Chilo’s reflects our ability to support expanding brands with consistent, reliable refrigeration infrastructure tailored to high-demand food service operations."
+},
+
+      {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1542838132-92c53300491e",
+        title: "Delivered and installed a full refrigeration package for pepe’s in edinburgh",
+        text: "CHILLNIX Cooling Solutions successfully delivered and installed a comprehensive refrigeration package for Pepe’s, a renowned food chain in Edinburgh. Our team equipped the establishment with state-of-the-art cold rooms, under-counter chillers, and display fridges designed to meet the fast-paced demands of the restaurant. By integrating our energy-efficient cooling solutions, Pepe’s now enjoys a reliable refrigeration system that enhances food storage and presentation, ensuring their customers receive the freshest meals possible. With our expertise, we supported their operational needs while maintaining the highest standards of efficiency and performance."
+      },
+      {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb",
+        title: "Transformed a local convenience store into an energy-efficient green retail space",
+        text: "CHILLNIX Cooling Solutions partnered with a local convenience store to overhaul their refrigeration system, focusing on energy efficiency and sustainability. We installed state-of-the-art refrigeration cabinets equipped with energy-efficient technology, reducing the store's energy consumption by 30%. Our team also provided a comprehensive training program for the staff on best practices for energy management, ensuring continued savings and eco-friendly operations. The transformation not only cut costs but also enhanced the store's appeal to environmentally conscious consumers, ultimately boosting foot traffic and sales."
+      }
+    ];
+
+    function handleVideoClick(e, el) {
+      const video = el.querySelector('video');
+      if (!video) return;
+
+      const isPlaying = !video.paused && !video.ended && video.currentTime > 0;
+      document.querySelectorAll('.video-wrap video').forEach(v => {
+        v.pause();
+        v.closest('.video-wrap').classList.remove('playing');
+      });
+
+      if (!isPlaying) {
+        el.classList.add('playing');
+        video.play();
+      } else {
+        el.classList.remove('playing');
+        video.pause();
+      }
+    }
+
+    let current = 0;
+
+    function openModal(index) {
+      current = index;
+      const p = projects[index];
+
+      document.getElementById('modalTitle').innerText = p.title;
+      document.getElementById('modalText').innerText = p.text;
+
+      const mediaContainer = document.getElementById('modalMedia');
+      mediaContainer.innerHTML = '';
+
+      if (p.type === 'video') {
+        const vid = document.createElement('video');
+        vid.controls = true;
+        vid.autoplay = true;
+        if (p.poster) vid.poster = p.poster;
+        const source = document.createElement('source');
+        source.src = p.src;
+        source.type = 'video/mp4';
+        vid.appendChild(source);
+        mediaContainer.appendChild(vid);
+      } else if (p.type === 'image') {
+        const img = document.createElement('img');
+        img.src = p.src;
+        img.alt = p.title;
+        mediaContainer.appendChild(img);
+      }
+
+      document.getElementById('projectModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('projectModal').style.display = 'none';
+      // stop modal video if any
+      const modalVid = document.querySelector('#modalMedia video');
+      if (modalVid) {
+        modalVid.pause();
+      }
+    }
+
+    function navigate(dir) {
+      current = (current + dir + projects.length) % projects.length;
+      openModal(current);
+    }
+
+    document.getElementById('projectModal').addEventListener('click', function (e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

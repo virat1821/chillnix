@@ -408,26 +408,86 @@
 
 
     <!-- image zoom function -->
-    <script>
-        function openImageZoom(el) {
-            const imgSrc = el.parentElement.querySelector('img').src;
+   <script>
+let images = [];
+let currentIndex = 0;
+let zoomed = false;
+let lastTap = 0;
 
-            let modal = document.querySelector('.image-zoom-modal');
+function openImageZoom(el){
+  images = Array.from(document.querySelectorAll('.image-wrap img'));
+  currentIndex = images.indexOf(el.parentElement.querySelector('img'));
 
-            if (!modal) {
-                modal = document.createElement('div');
-                modal.className = 'image-zoom-modal';
-                modal.innerHTML = `<img src="${imgSrc}" alt="Zoomed Image">`;
-                document.body.appendChild(modal);
-            } else {
-                modal.querySelector('img').src = imgSrc;
-            }
+  let modal = document.querySelector('.image-zoom-modal');
 
-            modal.style.display = 'flex';
+  if(!modal){
+    modal = document.createElement('div');
+    modal.className = 'image-zoom-modal';
+    modal.innerHTML = `
+      <span class="zoom-close">&times;</span>
+      <span class="zoom-nav zoom-prev">&#10094;</span>
+      <img>
+      <span class="zoom-nav zoom-next">&#10095;</span>
+    `;
+    document.body.appendChild(modal);
+  }
 
-            modal.onclick = () => modal.style.display = 'none';
-        }
-    </script>
+  const modalImg = modal.querySelector('img');
+  modalImg.src = images[currentIndex].src;
+  modalImg.style.transform = 'scale(1)';
+  zoomed = false;
+
+  modal.style.display = 'flex';
+
+  /* Close */
+  modal.querySelector('.zoom-close').onclick = () => modal.style.display = 'none';
+
+  /* Prev / Next */
+  modal.querySelector('.zoom-prev').onclick = () => navigate(-1);
+  modal.querySelector('.zoom-next').onclick = () => navigate(1);
+
+  /* Click outside image closes */
+  modal.onclick = e => {
+    if(e.target === modal) modal.style.display = 'none';
+  };
+
+  /* Double-tap zoom */
+  modalImg.ontouchend = e => {
+    const now = new Date().getTime();
+    if(now - lastTap < 300){
+      zoomed = !zoomed;
+      modalImg.style.transform = zoomed ? 'scale(2)' : 'scale(1)';
+    }
+    lastTap = now;
+  };
+
+  /* Desktop double click */
+  modalImg.ondblclick = () => {
+    zoomed = !zoomed;
+    modalImg.style.transform = zoomed ? 'scale(2)' : 'scale(1)';
+  };
+
+  /* Swipe support */
+  let startX = 0;
+  modalImg.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  modalImg.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if(startX - endX > 50) navigate(1);
+    if(endX - startX > 50) navigate(-1);
+  });
+}
+
+function navigate(dir){
+  currentIndex = (currentIndex + dir + images.length) % images.length;
+  const modalImg = document.querySelector('.image-zoom-modal img');
+  modalImg.src = images[currentIndex].src;
+  modalImg.style.transform = 'scale(1)';
+  zoomed = false;
+}
+</script>
 
 
 
